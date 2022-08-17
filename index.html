@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <title>静态页面布局</title>
+</head>
+
+<body>
+    <section class="wrap">
+        <!-- 头部区域 -->
+        <header class="header">我的静态页面布局</header>
+        <!-- 导航栏部分 -->
+        <nav class="nav">
+            <a href="#" class="item">
+                <img src="icon/HR面试.png" alt="">
+                <span>HR面试</span>
+            </a>
+            <a href="#" class="item">
+                <img src="icon/笔试.png" alt="">
+                <span>笔试</span>
+            </a>
+            <a href="#" class="item">
+                <img src="icon/技术面试.png" alt="">
+                <span>技术面试</span>
+            </a>
+            <a href="#" class="item">
+                <img src="icon/模拟面试.png" alt="">
+                <span>模拟面试</span>
+            </a>
+            <a href="#" class="item">
+                <img src="icon/面试技巧.png" alt="">
+                <span>面试技巧</span>
+            </a>
+            <a href="#" class="item">
+                <img src="icon/薪资查询.png" alt="">
+                <span>薪资查询</span>
+            </a>
+        </nav>
+        <!-- go模块 -->
+        <section class="go">
+            <img src="images/go.png" alt="">
+        </section>
+    </section>
+    <!-- 就业指导模块 -->
+    <section class="content">
+        <div class="con-hd">
+            <h4>
+                <span class="icon">
+                    <img src="images/新手指导.png" alt="">
+                </span>
+                就业指导
+            </h4>
+            <a href="#" class="more">更多>></a>
+        </div>
+        <div class="get_job_nav">
+            <!-- Swiper -->
+            <div class="swiper get_job">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#"><img src="images/组 33.png" alt=""></a>
+                        <p>老师教你应对面试技巧</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#"><img src="images/组 33.png" alt=""></a>
+                        <p>老师教你应对面试技巧</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#"><img src="images/组 33.png" alt=""></a>
+                        <p>老师教你应对面试技巧</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 左右按钮 -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+    <!-- 充电学习模块 -->
+    <section class="content con-fo">
+        <div class="con-hd">
+            <h4>
+                <span class="icon">
+                    <img src="images/新手指导.png" alt="">
+                </span>
+                充电学习
+            </h4>
+            <a href="#" class="more">更多>></a>
+        </div>
+        <div class="study">
+            <!-- Swiper -->
+            <div class="swiper mySwiper study_job">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="images/首页_03.png" alt="">
+                            <h4>说地道英语，告别中式英语</h4>
+                            <p>156人学习</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="images/首页_06.png" alt="">
+                            <h4>说地道英语，告别中式英语</h4>
+                            <p>156人学习</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="images/首页_03.png" alt="">
+                            <h4>说地道英语，告别中式英语</h4>
+                            <p>156人学习</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="images/首页_03.png" alt="">
+                            <h4>说地道英语，告别中式英语</h4>
+                            <p>156人学习</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="images/首页_03.png" alt="">
+                            <h4>说地道英语，告别中式英语</h4>
+                            <p>156人学习</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+    <!-- 底部模块 -->
+    <footer class="footer">
+        <a href="#">
+            <img src="icon/home.png" alt="">
+            <p>首页</p>
+        </a>
+        <a href="#">
+            <img src="icon/ms.png" alt="">
+            <p>技术面试</p>
+        </a>
+        <a href="#">
+            <img src="icon/net.png" alt="">
+            <p>模拟面试</p>
+        </a>
+        <a href="#">
+            <img src="icon/user.png" alt="">
+            <p>我的主页</p>
+        </a>
+    </footer>
+    <script src="js/flexible.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        // 第一个函数里面是 就业指导轮播图
+        (function () {
+            var mySwiper = new Swiper('.get_job', {
+                // 能够显示的slide个数 （尝试3个出现重影）
+                slidesPerView: 2,
+                // 每一个slide之间的距离
+                spaceBetween: 30,
+                // 是否让最大的盒子居中
+                centeredSlides: true,
+                loop: true,
+                // 如果需要前进后退按钮
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            })
+        })();
+        // 第二个函数里面是 学习充电模块
+        (function () {
+            // 如果页面中有多个轮播图  最好修改一下  swiper-container 类名
+            var swiper = new Swiper(".study_job", {
+                slidesPerView: 2.2,
+                spaceBetween: 20,
+            });
+        })()
+    </script>
+</body>
+
+</html>

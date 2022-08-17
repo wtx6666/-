@@ -1,0 +1,261 @@
+body {
+    min-width: 320px;
+    max-width: 750px;
+    margin: 0 auto;
+    background-color: #F2F4F7;
+    // height: 5000px;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+// 约束当屏幕大于750px 的时候，html字体大小不变化
+@media screen and (min-width:750px) {
+    html {
+        font-size: 37.5px !important;
+    }
+}
+
+.wrap {
+    background-color: #fff;
+    padding-bottom: .2667rem;
+}
+
+.header {
+    height: 2.1333rem;
+    border-bottom: 1px solid #EAEAEA;
+    text-align: center;
+    line-height: 2.1333rem;
+    font-size: .9333rem;
+}
+
+.nav {
+    display: flex;
+    padding: 1.1733rem 0 1.6rem;
+    // 显示不出来就换行
+    flex-wrap: wrap;
+
+    .item {
+        width: 33.33%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            width: 3.7067rem;
+            height: 3.7067rem;
+        }
+
+        span {
+            font-size: .6667rem;
+            color: #707070;
+        }
+
+        &:nth-child(-n+3) {
+            margin-bottom: 1.6533rem;
+        }
+    }
+}
+
+.go {
+    margin: 0 0.2666667rem 0 0.48rem;
+}
+
+.content {
+    padding: 1.0667rem .5867rem;
+    background-color: #fff;
+    margin-top: .2667rem;
+
+    .con-hd {
+        display: flex;
+        justify-content: space-between;
+        height: 1.0133rem;
+        line-height: 1.0133rem;
+
+        h4 {
+            margin: 0;
+            font-size: .7467rem;
+            color: #333333;
+
+            .icon {
+                display: inline-block;
+                width: 1.0133rem;
+                height: 1.0133rem;
+                vertical-align: bottom;
+            }
+
+        }
+
+        a {
+            font-size: .5867rem;
+            color: #999999;
+        }
+
+    }
+
+    .get_job_nav {
+        position: relative;
+        margin-top: .9867rem;
+
+        .swiper {
+            width: 14.32rem;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            // 改成竖向显示
+            flex-direction: column;
+
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            transition: 300ms;
+            // 其余内容
+            transform: scale(0.8);
+            opacity: .5;
+
+            a {
+                width: 9.3067rem;
+                height: 10.32rem;
+                border-radius: .4rem;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+
+                }
+            }
+
+            p {
+                width: 9.3067rem;
+                margin-top: .4rem;
+                font-size: .6667rem;
+                color: #333333;
+            }
+        }
+
+        // 中间选中的内容
+        .swiper-slide-active,
+        .swiper-slide-duplicate-active {
+            transform: scale(1);
+            z-index: 999;
+            opacity: 1;
+        }
+    }
+}
+
+.con-fo {
+    margin-bottom: 2.9333rem;
+}
+
+.study {
+    .study_job {
+        padding: .2667rem;
+    }
+
+    .swiper-slide {
+        width: 7.2533rem;
+        // height: 9.28rem;
+        // overflow: hidden;
+        border-radius: .16rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+
+        font-size: 18px;
+        background-color: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+
+        // a {
+        //     width: 7.2533rem;
+        //     height: 9.28rem;
+        //     transition: all 2s;
+        // }
+
+        // &:hover {
+        //     transform: scale(1.1);
+        // }
+
+        img {
+            padding: .1333rem .2667rem;
+            display: block;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        h4 {
+            font-size: .6933rem;
+            font-weight: 400;
+            margin: 0;
+            padding: .2667rem .2667rem;
+            color: black;
+        }
+
+        p {
+            color: #FF4400;
+            padding-left: .2667rem;
+            padding-bottom: .8rem;
+        }
+    }
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2.9333rem;
+    border-top: 1px solid #E2E2E2;
+    background-color: #fff;
+    z-index: 999;
+    display: flex;
+
+    a {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 1.0667rem;
+            height: .88rem;
+        }
+
+        p {
+            margin-top: .2667rem;
+            font-size: .5867rem;
+            color: #666666;
+        }
+    }
+}
